@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xpjoihg
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xpjoihg
+  template:
+    metadata:
+      labels:
+        app: xpjoihg
+    spec:
+      containers:
+      - image: okteto.dev/xpjoihg:latest
+        name: xpjoihg
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: Site
+          value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
+        - name: Vless_UUID
+          value: "dfb354ca-b0b0-412c-ade4-c821aadc70b7"
+        - name: Vless_Path
+          value: "/dfb354ca-b0b0-412c-ade4-c821aadc70b7"
+        - name: Vmess_UUID
+          value: "aad7db0b-ce0f-4432-a54a-f744a4ffdcc4"
+        - name: Vmess_Path
+          value: "/aad7db0b-ce0f-4432-a54a-f744a4ffdcc4"
+        - name: Share_Path
+          value: "/v2link"
